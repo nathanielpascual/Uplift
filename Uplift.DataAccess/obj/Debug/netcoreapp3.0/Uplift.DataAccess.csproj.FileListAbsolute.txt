@@ -1,13 +1,13 @@
 C:\NodeProject\Microsoft\Projects\Uplift\Uplift.DataAccess\bin\Debug\netcoreapp3.0\Uplift.DataAccess.deps.json
 C:\NodeProject\Microsoft\Projects\Uplift\Uplift.DataAccess\bin\Debug\netcoreapp3.0\Uplift.DataAccess.dll
-C:\NodeProject\Microsoft\Projects\Uplift\Uplift.DataAccess\obj\Debug\netcoreapp3.0\Uplift.DataAccess.csprojAssemblyReference.cache
-C:\NodeProject\Microsoft\Projects\Uplift\Uplift.DataAccess\obj\Debug\netcoreapp3.0\Uplift.DataAccess.AssemblyInfoInputs.cache
-C:\NodeProject\Microsoft\Projects\Uplift\Uplift.DataAccess\obj\Debug\netcoreapp3.0\Uplift.DataAccess.AssemblyInfo.cs
 C:\NodeProject\Microsoft\Projects\Uplift\Uplift.DataAccess\bin\Debug\netcoreapp3.0\Uplift.DataAccess.pdb
 C:\NodeProject\Microsoft\Projects\Uplift\Uplift.DataAccess\bin\Debug\netcoreapp3.0\Uplift.Models.dll
 C:\NodeProject\Microsoft\Projects\Uplift\Uplift.DataAccess\bin\Debug\netcoreapp3.0\Uplift.Utility.dll
 C:\NodeProject\Microsoft\Projects\Uplift\Uplift.DataAccess\bin\Debug\netcoreapp3.0\Uplift.Models.pdb
 C:\NodeProject\Microsoft\Projects\Uplift\Uplift.DataAccess\bin\Debug\netcoreapp3.0\Uplift.Utility.pdb
+C:\NodeProject\Microsoft\Projects\Uplift\Uplift.DataAccess\obj\Debug\netcoreapp3.0\Uplift.DataAccess.csprojAssemblyReference.cache
+C:\NodeProject\Microsoft\Projects\Uplift\Uplift.DataAccess\obj\Debug\netcoreapp3.0\Uplift.DataAccess.AssemblyInfoInputs.cache
+C:\NodeProject\Microsoft\Projects\Uplift\Uplift.DataAccess\obj\Debug\netcoreapp3.0\Uplift.DataAccess.AssemblyInfo.cs
 C:\NodeProject\Microsoft\Projects\Uplift\Uplift.DataAccess\obj\Debug\netcoreapp3.0\Uplift.DataAccess.csproj.CopyComplete
 C:\NodeProject\Microsoft\Projects\Uplift\Uplift.DataAccess\obj\Debug\netcoreapp3.0\Uplift.DataAccess.dll
 C:\NodeProject\Microsoft\Projects\Uplift\Uplift.DataAccess\obj\Debug\netcoreapp3.0\Uplift.DataAccess.pdb
