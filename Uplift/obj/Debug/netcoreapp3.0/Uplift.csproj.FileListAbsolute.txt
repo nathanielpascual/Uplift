@@ -409,8 +409,6 @@ C:\NodeProject\Microsoft\Projects\Uplift\Uplift\obj\Debug\netcoreapp3.0\Uplift.A
 C:\NodeProject\Microsoft\Projects\Uplift\Uplift\obj\Debug\netcoreapp3.0\Uplift.TagHelpers.input.cache
 C:\NodeProject\Microsoft\Projects\Uplift\Uplift\obj\Debug\netcoreapp3.0\Uplift.TagHelpers.output.cache
 C:\NodeProject\Microsoft\Projects\Uplift\Uplift\obj\Debug\netcoreapp3.0\Uplift.RazorCoreGenerate.cache
-C:\NodeProject\Microsoft\Projects\Uplift\Uplift\obj\Debug\netcoreapp3.0\Razor\Areas\Admin\Views\Home\Index.cshtml.g.cs
-C:\NodeProject\Microsoft\Projects\Uplift\Uplift\obj\Debug\netcoreapp3.0\Razor\Areas\Admin\Views\Home\Privacy.cshtml.g.cs
 C:\NodeProject\Microsoft\Projects\Uplift\Uplift\obj\Debug\netcoreapp3.0\Razor\Areas\Admin\Views\_ViewImports.cshtml.g.cs
 C:\NodeProject\Microsoft\Projects\Uplift\Uplift\obj\Debug\netcoreapp3.0\Razor\Areas\Admin\Views\_ViewStart.cshtml.g.cs
 C:\NodeProject\Microsoft\Projects\Uplift\Uplift\obj\Debug\netcoreapp3.0\Razor\Areas\Customer\Views\Home\Index.cshtml.g.cs
@@ -430,3 +428,4 @@ C:\NodeProject\Microsoft\Projects\Uplift\Uplift\obj\Debug\netcoreapp3.0\Uplift.V
 C:\NodeProject\Microsoft\Projects\Uplift\Uplift\obj\Debug\netcoreapp3.0\Uplift.csproj.CopyComplete
 C:\NodeProject\Microsoft\Projects\Uplift\Uplift\obj\Debug\netcoreapp3.0\Uplift.dll
 C:\NodeProject\Microsoft\Projects\Uplift\Uplift\obj\Debug\netcoreapp3.0\Uplift.pdb
+C:\NodeProject\Microsoft\Projects\Uplift\Uplift\obj\Debug\netcoreapp3.0\Razor\Areas\Admin\Views\Category\Index.cshtml.g.cs
