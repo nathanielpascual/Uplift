@@ -62,10 +62,24 @@ namespace Uplift.Areas.Admin.Controllers
 		[HttpGet]
 		public IActionResult GetAll()
 		{
-			return Json(new { data = _unitOfWork.Frequency.GetAll()});
+			return Json(new { data = _unitOfWork.Frequency.GetAll(null,x=>x.OrderBy(x=>x.FrequencyCount),null)});
 		}
 
-		
+		[HttpDelete]
+		public IActionResult Delete(int id)
+		{
+			var obj = _unitOfWork.Frequency.Get(id);
+
+			if (obj == null)
+			{
+				return Json(new { success = false, message = "Error while deleting." });
+			}
+
+			_unitOfWork.Frequency.Remove(obj);
+			_unitOfWork.Save();
+
+			return Json(new { success = true, message = "Deleted Successful." });
+		}
 		#endregion
 	}
 }
