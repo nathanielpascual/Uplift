@@ -1,10 +1,10 @@
 ﻿var dataTable;
 
-$(document).ready(function () {
+$(document).ready(()=> {
     loadDataTable();
 });
 
-function loadDataTable() {
+loadDataTable=()=> {
     dataTable = $('#tblData').DataTable({
         "ajax": {
             "url": "/admin/category/GetAll",
@@ -16,7 +16,7 @@ function loadDataTable() {
             { "data": "displayOrder", "width": "20%" },
             {
                 "data": "id",
-                "render": function (data) {
+                "render":  (data)=> {
                     return `<div class="text-center">
                                 <a href="/Admin/category/Upsert/${data}" class='btn btn-success text-white' style='cursor:pointer;width:100px'>
                                     <i class='far fa-edit'></i>&nbsp;Edit
@@ -37,7 +37,7 @@ function loadDataTable() {
     });
 }
 
-function Delete(url) {
+ Delete=(url)=> {
     swal({
         title: "Are you sure you want to delete?",
         text: "You will not be able to restore the content!",
@@ -46,11 +46,11 @@ function Delete(url) {
         confirmButtonColor: "#DD6B55",
         confirmButtonText: "Yes, delete it!",
         closeOnConfirm:true 
-    }, function () {
+    },  ()=>{
             $.ajax({
                 type: "DELETE",
                 url: url,
-                success: function (data) {
+                success: (data)=> {
                     if (data.success) {
                         toastr.success(data.message);
                         dataTable.ajax.reload();
