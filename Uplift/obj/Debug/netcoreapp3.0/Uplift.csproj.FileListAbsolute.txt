@@ -429,3 +429,6 @@ C:\NodeProject\Microsoft\Projects\Uplift\Uplift\obj\Debug\netcoreapp3.0\Uplift.c
 C:\NodeProject\Microsoft\Projects\Uplift\Uplift\obj\Debug\netcoreapp3.0\Uplift.dll
 C:\NodeProject\Microsoft\Projects\Uplift\Uplift\obj\Debug\netcoreapp3.0\Uplift.pdb
 C:\NodeProject\Microsoft\Projects\Uplift\Uplift\obj\Debug\netcoreapp3.0\Razor\Areas\Admin\Views\Category\Index.cshtml.g.cs
+C:\NodeProject\Microsoft\Projects\Uplift\Uplift\obj\Debug\netcoreapp3.0\Razor\Areas\Admin\Views\Category\Upsert.cshtml.g.cs
+C:\NodeProject\Microsoft\Projects\Uplift\Uplift\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_CreateAndBackToListButton.cshtml.g.cs
+C:\NodeProject\Microsoft\Projects\Uplift\Uplift\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_EditAndBackToListButton.cshtml.g.cs
