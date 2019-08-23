@@ -45,7 +45,7 @@
                     <label asp-for="Service.LongDescription"></label>
                 </div>
                 <div class="col-8">
-                    <input asp-for="Service.LongDescription" class="form-control" />
+                    <textarea asp-for="Service.LongDescription" class="form-control" style="height:300px" ></textarea>
                     <span asp-validation-for="Service.LongDescription" class="text-danger"></span>
                 </div>
             </div>
@@ -108,7 +108,13 @@
 
 </form>
 @section Scripts{ 
+    <script src="https://cdn.tiny.cloud/1/kpk3gwrvnio0c23ua2w4ac4aho9z9ft7ju9vwteinl6hspv3/tinymce/5/tinymce.min.js"></script>
     <script>
+        tinymce.init({
+            selector: 'textarea',
+            plugins: 'lists',
+            menubar: 'file edit format'
+        });
         validateInput = () => {
             if (document.getElementById("uploadBox").value == "") {
                 swal("Error", "Please Select an Image", "error");
