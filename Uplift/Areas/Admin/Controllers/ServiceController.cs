@@ -6,12 +6,13 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Uplift.DataAccess.Data.Repository.IRepository;
 using Uplift.Models;
+using Uplift.Models.ViewModels;
 
 namespace Uplift.Areas.Admin.Controllers
 {
 	[Area("Admin")]
-    public class ServiceController : Controller
-    {
+	public class ServiceController : Controller
+	{
 		private readonly IUnitOfWork _unitOfWork;
 		private readonly IWebHostEnvironment _hostEnvironment;
 		public ServiceController(IUnitOfWork unitOfWork, IWebHostEnvironment hostEnvironment)
@@ -19,10 +20,27 @@ namespace Uplift.Areas.Admin.Controllers
 			_unitOfWork = unitOfWork;
 			_hostEnvironment = hostEnvironment;
 		}
-        public IActionResult Index()
-        {
-            return View();
-        }
+		public IActionResult Index()
+		{
+			return View();
+		}
+
+		public IActionResult Upsert(int? id)
+		{
+			ServiceViewModel serviceVM = new ServiceViewModel()
+			{
+				Service = new Models.Service(),
+				CategoryList = _unitOfWork.Category.GetCategoryListForDropDown(),
+				FrequencyList = _unitOfWork.Frequency.GetFrequencyListForDropDown()
+			};
+
+			if (id != null)
+			{
+				serviceVM.Service = _unitOfWork.Service.Get(id.GetValueOrDefault());
+			}
+
+			return View(serviceVM);
+		}
 
 		#region API
 		[HttpGet]
