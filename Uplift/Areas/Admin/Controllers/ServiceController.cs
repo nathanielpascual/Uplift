@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
@@ -15,6 +16,9 @@ namespace Uplift.Areas.Admin.Controllers
 	{
 		private readonly IUnitOfWork _unitOfWork;
 		private readonly IWebHostEnvironment _hostEnvironment;
+
+		[BindProperty]
+		public ServiceViewModel serviceVM { get; set; }
 		public ServiceController(IUnitOfWork unitOfWork, IWebHostEnvironment hostEnvironment)
 		{
 			_unitOfWork = unitOfWork;
@@ -27,7 +31,7 @@ namespace Uplift.Areas.Admin.Controllers
 
 		public IActionResult Upsert(int? id)
 		{
-			ServiceViewModel serviceVM = new ServiceViewModel()
+		    serviceVM = new ServiceViewModel()
 			{
 				Service = new Models.Service(),
 				CategoryList = _unitOfWork.Category.GetCategoryListForDropDown(),
@@ -42,6 +46,73 @@ namespace Uplift.Areas.Admin.Controllers
 			return View(serviceVM);
 		}
 
+		[HttpPost]
+		[ValidateAntiForgeryToken]
+		public IActionResult Upsert()
+		{
+			if (ModelState.IsValid)
+			{
+				string webRootPath = _hostEnvironment.WebRootPath;
+				var files = HttpContext.Request.Form.Files;
+
+				if (serviceVM.Service.Id == 0)
+				{
+					string fileName = Guid.NewGuid().ToString();
+					var uploads = Path.Combine(webRootPath, @"images\services");
+					var extension = Path.GetExtension(files[0].FileName);
+
+					using (var fileStreams = new FileStream(Path.Combine(uploads, fileName + extension), FileMode.Create))
+					{
+						files[0].CopyTo(fileStreams);
+					}
+
+					serviceVM.Service.ImageUrl = @"\images\services\" + fileName + extension;
+					_unitOfWork.Service.Add(serviceVM.Service);
+				}
+				else
+				{
+					var service = _unitOfWork.Service.Get(serviceVM.Service.Id);
+
+					if (files.Count > 0)
+					{
+						string fileName = Guid.NewGuid().ToString();
+						var uploads = Path.Combine(webRootPath, @"images\services");
+						var extensionNew = Path.GetExtension(files[0].FileName);
+
+						var imagePath = Path.Combine(webRootPath, service.ImageUrl.TrimStart('\\'));
+
+						if (System.IO.File.Exists(imagePath))
+						{
+							System.IO.File.Delete(imagePath);
+						}
+
+						using (var fileStreams = new FileStream(Path.Combine(uploads, fileName + extensionNew), FileMode.Create))
+						{
+							files[0].CopyTo(fileStreams);
+						}
+
+						serviceVM.Service.ImageUrl = @"\images\services\" + fileName + extensionNew;
+					}
+					else
+					{
+						serviceVM.Service.ImageUrl = service.ImageUrl;
+					}
+
+					_unitOfWork.Service.Update(serviceVM.Service);
+
+				}
+
+				_unitOfWork.Save();
+
+				return RedirectToAction(nameof(Index));
+			}
+			else
+			{
+				serviceVM.CategoryList = _unitOfWork.Category.GetCategoryListForDropDown();
+				serviceVM.FrequencyList = _unitOfWork.Frequency.GetFrequencyListForDropDown();
+				return View(serviceVM);
+			}
+		}
 		#region API
 		[HttpGet]
 		public IActionResult GetAll()

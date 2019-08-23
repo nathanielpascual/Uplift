@@ -13,8 +13,8 @@ loadDataTable = () => {
         "columns": [
             { "data": "name", "width": "20%" },
             { "data": "category.name", "width": "20%" },
-            { "data": "price", "width": "20%" },
-            { "data": "frequency.frequencyCount", "width": "20%" },  
+            { "data": "price", "width": "15%" },
+            { "data": "frequency.frequencyCount", "width": "15%" },  
             {
                 "data": "id",
                 "render": (data) => {
@@ -28,7 +28,7 @@ loadDataTable = () => {
                                 </a>
                             </div>
                     `
-                },"width":"20%"
+                },"width":"30%"
             }
         ],
         "language": {
