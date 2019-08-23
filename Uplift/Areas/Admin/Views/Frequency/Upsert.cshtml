@@ -12,6 +12,11 @@
         {
             <input type="hidden" asp-for="Id" />
             title = "Edit Frequency";
+            ViewData["Title"] = title;
+        }
+        else
+        {
+            ViewData["Title"] = title;
         }
         <div class="col-12">
             <h2 class="text-primary">@title</h2>
