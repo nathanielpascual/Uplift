@@ -32,6 +32,9 @@ namespace Uplift.Models
 		[ForeignKey("CategoryId")]
 		public Category Category { get; set; }
 
+		[Required]
+		public int FrequencyId { get; set; }
+
 		[ForeignKey("FrequencyId")]
 		public Frequency Frequency { get; set; }
 	}
