@@ -36,6 +36,12 @@ namespace Uplift
 				.AddEntityFrameworkStores<ApplicationDbContext>()
 				.AddDefaultTokenProviders();
 			//AddDefaultUI(UIFramework.Boostrap4);
+			services.AddSession(options =>
+			{
+				options.IdleTimeout = TimeSpan.FromMinutes(30);
+				options.Cookie.HttpOnly = true;
+				options.Cookie.IsEssential = true;
+			});
 			services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 			services.AddControllersWithViews().AddNewtonsoftJson().AddRazorRuntimeCompilation();
@@ -59,7 +65,7 @@ namespace Uplift
 			}
 			app.UseHttpsRedirection();
 			app.UseStaticFiles();
-
+			app.UseSession();
 			app.UseRouting();
 
 			app.UseAuthentication();
