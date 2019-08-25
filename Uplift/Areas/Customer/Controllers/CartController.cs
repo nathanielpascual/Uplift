@@ -18,7 +18,7 @@ namespace Uplift.Areas.Customer.Controllers
 		private readonly IUnitOfWork _unitOfWork;
 
 		[BindProperty]
-		private CartViewModel CartVM { get; set; }
+		public CartViewModel CartVM { get; set; }
 
 		public CartController(IUnitOfWork unitOfWork)
 		{
@@ -61,9 +61,8 @@ namespace Uplift.Areas.Customer.Controllers
 		[HttpPost]
 		[ValidateAntiForgeryToken]
 		[ActionName("Summary")]
-		public IActionResult SummaryPOST(CartViewModel cartViewModel)
+		public IActionResult SummaryPOST()
 		{
-			CartVM.OrderHeader = cartViewModel.OrderHeader;
 
 			if (!ModelState.IsValid)
 			{
