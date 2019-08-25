@@ -439,3 +439,4 @@ C:\NodeProject\Microsoft\Projects\Uplift\Uplift\obj\Debug\netcoreapp3.0\Razor\Ar
 C:\NodeProject\Microsoft\Projects\Uplift\Uplift\obj\Debug\netcoreapp3.0\Razor\Areas\Customer\Views\Home\Details.cshtml.g.cs
 C:\NodeProject\Microsoft\Projects\Uplift\Uplift\obj\Debug\netcoreapp3.0\Razor\Areas\Customer\Views\Cart\Index.cshtml.g.cs
 C:\NodeProject\Microsoft\Projects\Uplift\Uplift\obj\Debug\netcoreapp3.0\Razor\Areas\Customer\Views\Cart\Summary.cshtml.g.cs
+C:\NodeProject\Microsoft\Projects\Uplift\Uplift\obj\Debug\netcoreapp3.0\Razor\Areas\Customer\Views\Cart\OrderConfirmation.cshtml.g.cs

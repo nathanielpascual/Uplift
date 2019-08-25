@@ -4,7 +4,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<form method="post">
+<form method="post" asp-action="Summary">
     @if (Model.ServiceList.Count > 0)
     {
         <div class="backgroundWhite container">
@@ -30,7 +30,7 @@
                                        <label>Name</label>
                                    </div>
                                    <div class="col-9">
-                                       <input asp-for="OrderHeader.Name" id="txtName" type="text" class="form-control" />
+                                       <input asp-for="OrderHeader.Name" id="txtName" class="form-control" />
                                        <span asp-validation-for="OrderHeader.Name" class="text-danger"></span>
                                    </div>
                                </div>
@@ -39,7 +39,7 @@
                                        <label>Phone</label>
                                    </div>
                                    <div class="col-9">
-                                       <input asp-for="OrderHeader.Phone" id="txtPhone" type="text" class="form-control" />
+                                       <input asp-for="OrderHeader.Phone" id="txtPhone" class="form-control" />
                                        <span asp-validation-for="OrderHeader.Phone" class="text-danger"></span>
                                    </div>
                                </div>
@@ -77,6 +77,15 @@
                                    <div class="col-9">
                                        <input asp-for="OrderHeader.Email" type="text" class="form-control" />
                                        <span asp-validation-for="OrderHeader.Email" class="text-danger"></span>
+                                   </div>
+                               </div>
+                               <div class="row my-1">
+                                   <div class="col-3">
+                                       <label>Comments</label>
+                                   </div>
+                                   <div class="col-9">
+                                       <input asp-for="OrderHeader.Comments" type="text" class="form-control" />
+                                       <span asp-validation-for="OrderHeader.Comments" class="text-danger"></span>
                                    </div>
                                </div>
                            </div>
