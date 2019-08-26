@@ -62,7 +62,7 @@ namespace Uplift.Areas.Admin.Controllers
 		[HttpGet]
 		public IActionResult GetAll()
 		{
-			return Json(new { data = _unitOfWork.Frequency.GetAll(null,x=>x.OrderBy(x=>x.FrequencyCount),null)});
+			return Json(new { data = _unitOfWork.Frequency.GetAll(null,c=>c.OrderBy(o=>o.FrequencyCount),null)});
 		}
 
 		[HttpDelete]

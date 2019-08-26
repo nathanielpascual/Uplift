@@ -22,5 +22,7 @@ namespace Uplift.DataAccess.Data
 		public DbSet<OrderHeader> OrderHeader { get; set; }
 
 		public DbSet<OrderDetails> OrderDetails { get; set; }
+
+		public DbSet<ApplicationUser> ApplicationUser { get; set; }
 	}
 }

@@ -15,6 +15,7 @@ using Uplift.DataAccess.Data;
 using Uplift.DataAccess.Data.Repository.IRepository;
 using Uplift.DataAccess.Data.Repository;
 
+
 namespace Uplift
 {
 	public class Startup
@@ -43,7 +44,7 @@ namespace Uplift
 				options.Cookie.IsEssential = true;
 			});
 			services.AddScoped<IUnitOfWork, UnitOfWork>();
-
+		
 			services.AddControllersWithViews().AddNewtonsoftJson().AddRazorRuntimeCompilation();
 			services.AddRazorPages();
 			
