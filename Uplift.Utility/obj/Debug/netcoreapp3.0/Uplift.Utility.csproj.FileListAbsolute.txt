@@ -1,8 +1,8 @@
 C:\NodeProject\Microsoft\Projects\Uplift\Uplift.Utility\bin\Debug\netcoreapp3.0\Uplift.Utility.deps.json
 C:\NodeProject\Microsoft\Projects\Uplift\Uplift.Utility\bin\Debug\netcoreapp3.0\Uplift.Utility.dll
 C:\NodeProject\Microsoft\Projects\Uplift\Uplift.Utility\bin\Debug\netcoreapp3.0\Uplift.Utility.pdb
-C:\NodeProject\Microsoft\Projects\Uplift\Uplift.Utility\obj\Debug\netcoreapp3.0\Uplift.Utility.csprojAssemblyReference.cache
 C:\NodeProject\Microsoft\Projects\Uplift\Uplift.Utility\obj\Debug\netcoreapp3.0\Uplift.Utility.AssemblyInfoInputs.cache
 C:\NodeProject\Microsoft\Projects\Uplift\Uplift.Utility\obj\Debug\netcoreapp3.0\Uplift.Utility.AssemblyInfo.cs
 C:\NodeProject\Microsoft\Projects\Uplift\Uplift.Utility\obj\Debug\netcoreapp3.0\Uplift.Utility.dll
 C:\NodeProject\Microsoft\Projects\Uplift\Uplift.Utility\obj\Debug\netcoreapp3.0\Uplift.Utility.pdb
+C:\NodeProject\Microsoft\Projects\Uplift\Uplift.Utility\obj\Debug\netcoreapp3.0\Uplift.Utility.csprojAssemblyReference.cache
