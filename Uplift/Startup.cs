@@ -14,7 +14,8 @@ using Microsoft.Extensions.Hosting;
 using Uplift.DataAccess.Data;
 using Uplift.DataAccess.Data.Repository.IRepository;
 using Uplift.DataAccess.Data.Repository;
-
+using Microsoft.AspNetCore.Identity.UI.Services;
+using Uplift.Areas.Identity.Services;
 
 namespace Uplift
 {
@@ -33,7 +34,11 @@ namespace Uplift
 			services.AddDbContext<ApplicationDbContext>(options =>
 				options.UseSqlServer(
 					Configuration.GetConnectionString("DefaultConnection")));
-			services.AddIdentity<IdentityUser, IdentityRole>()
+			services.AddIdentity<IdentityUser, IdentityRole>(
+				options => {
+					options.User.RequireUniqueEmail = false;
+							}
+				)
 				.AddEntityFrameworkStores<ApplicationDbContext>()
 				.AddDefaultTokenProviders();
 			//AddDefaultUI(UIFramework.Boostrap4);
@@ -44,7 +49,7 @@ namespace Uplift
 				options.Cookie.IsEssential = true;
 			});
 			services.AddScoped<IUnitOfWork, UnitOfWork>();
-		
+			services.AddTransient<IEmailSender, EmailSender>();
 			services.AddControllersWithViews().AddNewtonsoftJson().AddRazorRuntimeCompilation();
 			services.AddRazorPages();
 			
@@ -71,7 +76,7 @@ namespace Uplift
 
 			app.UseAuthentication();
 			app.UseAuthorization();
-
+			
 			app.UseEndpoints(endpoints =>
 			{
 				endpoints.MapControllerRoute(

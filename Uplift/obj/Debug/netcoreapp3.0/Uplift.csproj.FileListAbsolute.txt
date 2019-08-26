@@ -479,3 +479,4 @@ C:\NodeProject\Microsoft\Projects\Uplift\Uplift\obj\Debug\netcoreapp3.0\Razor\Ar
 C:\NodeProject\Microsoft\Projects\Uplift\Uplift\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_CookieConsentPartial.cshtml.g.cs
 C:\NodeProject\Microsoft\Projects\Uplift\Uplift\obj\Debug\netcoreapp3.0\Uplift.MvcApplicationPartsAssemblyInfo.cs
 C:\NodeProject\Microsoft\Projects\Uplift\Uplift\obj\Debug\netcoreapp3.0\Uplift.MvcApplicationPartsAssemblyInfo.cache
+C:\NodeProject\Microsoft\Projects\Uplift\Uplift\obj\Debug\netcoreapp3.0\Razor\Areas\Admin\Views\User\Index.cshtml.g.cs
