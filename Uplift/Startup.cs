@@ -49,7 +49,15 @@ namespace Uplift
 				options.Cookie.IsEssential = true;
 			});
 			services.AddScoped<IUnitOfWork, UnitOfWork>();
-			services.AddTransient<IEmailSender, EmailSender>();
+			services.AddTransient<IEmailSender, EmailSender>(i =>
+				new EmailSender(
+					Configuration["EmailSender:Host"],
+					Configuration.GetValue<int>("EmailSender:Port"),
+					Configuration.GetValue<bool>("EmailSender:EnableSSL"),
+					Configuration["EmailSender:UserName"],
+					Configuration["EmailSender:Password"]
+				)
+			);
 			services.AddControllersWithViews().AddNewtonsoftJson().AddRazorRuntimeCompilation();
 			services.AddRazorPages();
 			
