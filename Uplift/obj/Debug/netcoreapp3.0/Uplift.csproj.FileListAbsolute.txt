@@ -480,3 +480,4 @@ C:\NodeProject\Microsoft\Projects\Uplift\Uplift\bin\Debug\netcoreapp3.0\refs\Sys
 C:\NodeProject\Microsoft\Projects\Uplift\Uplift\bin\Debug\netcoreapp3.0\refs\System.Xml.XPath.XDocument.dll
 C:\NodeProject\Microsoft\Projects\Uplift\Uplift\bin\Debug\netcoreapp3.0\refs\WindowsBase.dll
 C:\NodeProject\Microsoft\Projects\Uplift\Uplift\obj\Debug\netcoreapp3.0\Uplift.csproj.CopyComplete
+C:\NodeProject\Microsoft\Projects\Uplift\Uplift\obj\Debug\netcoreapp3.0\Razor\Areas\Admin\Views\Order\Index.cshtml.g.cs
