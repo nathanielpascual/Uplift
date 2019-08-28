@@ -15,7 +15,7 @@
                         <i class="fas fa-shopping-cart"></i>&nbsp;Order Summary
                     </div>
                     <div class="col-12 col-md-4 offset-md-2 text-right">
-                        <a asp-action="Index" asp-controller="Order" asp-area="Customer" class="btn btn-outline-info form-control btn-sm">Back to Order</a>
+                        <a asp-action="Index" asp-controller="order" class="btn btn-outline-info form-control btn-sm">Back to Order</a>
                     </div>
                 </div>
                 <div class="card-body">
@@ -120,10 +120,10 @@
                         {
 
                             <div class="col-6 offset-md-4 col-md-4 col-lg-2 offset-lg-8">
-                                <a asp-action="Approved" asp-route-id="@Model.OrderHeader.Id" class="btn btn-success form-control">Approved</a>
+                                <a asp-action="Approve" asp-controller="order" asp-route-id="@Model.OrderHeader.Id" class="btn btn-success form-control">Approved</a>
                             </div>
                             <div class="col-6 col-md-4 col-lg-2">
-                                <a asp-action="Approved" asp-route-id="@Model.OrderHeader.Id" class="btn btn-danger form-control">Reject</a>
+                                <a asp-action="Reject"  asp-controller="order" asp-route-id="@Model.OrderHeader.Id" class="btn btn-danger form-control">Reject</a>
                             </div>
                         }
                     </div>
