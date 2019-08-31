@@ -30,30 +30,34 @@
             <div class="collapse navbar-collapse" id="navbarColor01">
 
                 <ul class="navbar-nav mr-auto">
-                     <li class="nav-item active">
+                    <li class="nav-item active">
                         <a class="nav-link" asp-area="Customer" asp-controller="Home" asp-action="Index">Home</a>
                     </li>
-                    <li class ="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropDown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Content Management
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropDown">
-                            <a class="dropdown-item text-white" asp-area="Admin" asp-controller="Category" asp-action="Index">Category</a>
-                            <a class="dropdown-item text-white" asp-area="Admin" asp-controller="Frequency" asp-action="Index">Frequency</a>
-                            <a class="dropdown-item text-white" asp-area="Admin" asp-controller="Service" asp-action="Index">Service</a>
-                            <a class="dropdown-item text-white" asp-area="Admin" asp-controller="User" asp-action="Index">User</a>
-                            <a class="dropdown-item text-white" asp-area="Admin" asp-controller="Order" asp-action="Index">Orders</a>
-                        </div>
-                    </li>
-                   
 
-                    <li class="nav-item">
-                        <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                    </li>
+                    @if (User.IsInRole(StaticDetails.Manager) || User.IsInRole(StaticDetails.Admin))
+                    {
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropDown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Content Management
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropDown">
+                                <a class="dropdown-item text-white" asp-area="Admin" asp-controller="Category" asp-action="Index">Category</a>
+                                <a class="dropdown-item text-white" asp-area="Admin" asp-controller="Frequency" asp-action="Index">Frequency</a>
+                                <a class="dropdown-item text-white" asp-area="Admin" asp-controller="Service" asp-action="Index">Service</a>
+                                @if (User.IsInRole(StaticDetails.Admin))
+                                {
+                                    <a class="dropdown-item text-white" asp-area="Admin" asp-controller="User" asp-action="Index">User</a>
+                                }
+
+                                <a class="dropdown-item text-white" asp-area="Admin" asp-controller="Order" asp-action="Index">Orders</a>
+                            </div>
+                        </li>
+                    }
+
                     @if (HttpContextAccessor.HttpContext.Session.GetObject<List<int>>(StaticDetails.SessionCart) != null)
                     {
                         <li style="color:white">
-                            <a asp-area="Customer" asp-controller="Cart" asp-action="Index" class="nav-link text-white" >
+                            <a asp-area="Customer" asp-controller="Cart" asp-action="Index" class="nav-link text-white">
                                 @{
                                     var count = HttpContextAccessor.HttpContext.Session.GetObject<List<int>>(StaticDetails.SessionCart).Count();
                                 }
@@ -64,7 +68,7 @@
                     else
                     {
                         <li style="color:white">
-                            <a  class="nav-link text-white"> 
+                            <a class="nav-link text-white">
                                 <i class="fas fa-shopping-cart"></i>&nbsp;(0)
                             </a>
                         </li>
