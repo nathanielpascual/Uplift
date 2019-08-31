@@ -480,3 +480,6 @@ C:\NodeProject\Microsoft\Projects\Uplift\Uplift\bin\Debug\netcoreapp3.0\refs\Win
 C:\NodeProject\Microsoft\Projects\Uplift\Uplift\obj\Debug\netcoreapp3.0\Uplift.csproj.CopyComplete
 C:\NodeProject\Microsoft\Projects\Uplift\Uplift\obj\Debug\netcoreapp3.0\Razor\Areas\Admin\Views\Order\Index.cshtml.g.cs
 C:\NodeProject\Microsoft\Projects\Uplift\Uplift\obj\Debug\netcoreapp3.0\Razor\Areas\Admin\Views\Order\Details.cshtml.g.cs
+C:\NodeProject\Microsoft\Projects\Uplift\Uplift\bin\Debug\netcoreapp3.0\Dapper.dll
+C:\NodeProject\Microsoft\Projects\Uplift\Uplift\obj\Debug\netcoreapp3.0\Uplift.MvcApplicationPartsAssemblyInfo.cs
+C:\NodeProject\Microsoft\Projects\Uplift\Uplift\obj\Debug\netcoreapp3.0\Uplift.MvcApplicationPartsAssemblyInfo.cache

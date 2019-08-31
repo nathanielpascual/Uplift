@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Uplift.DataAccess.Data.Repository.ISPRepository;
 
 namespace Uplift.DataAccess.Data.Repository.IRepository
 {
@@ -16,6 +17,10 @@ namespace Uplift.DataAccess.Data.Repository.IRepository
 		IOrderDetailsRepository OrderDetails { get; }
 
 		IUserRepository User { get; }
+
+		#region StoredProcedure
+		ISP_Call SP_Call { get; }
+		#endregion
 		void Save();
 	}
 }
