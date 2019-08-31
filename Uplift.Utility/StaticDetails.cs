@@ -18,6 +18,7 @@ namespace Uplift.Utility
 
 		public const string Manager = "Manager";
 
+		public const string Usp_GetAllCategory = "usp_GetAllCategory";
 
 	}
 }
