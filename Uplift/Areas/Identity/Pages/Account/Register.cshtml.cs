@@ -112,11 +112,11 @@ namespace Uplift.Areas.Identity.Pages.Account
 				var result = await _userManager.CreateAsync(user, Input.Password);
                 if (result.Succeeded)
                 {
-					if (!await _roleManager.RoleExistsAsync(StaticDetails.Admin))
-					{
-						await _roleManager.CreateAsync(new IdentityRole(StaticDetails.Admin));
-						await _roleManager.CreateAsync(new IdentityRole(StaticDetails.Manager));
-					}
+					//if (!await _roleManager.RoleExistsAsync(StaticDetails.Admin))
+					//{
+					//	await _roleManager.CreateAsync(new IdentityRole(StaticDetails.Admin));
+					//	await _roleManager.CreateAsync(new IdentityRole(StaticDetails.Manager));
+					//}
 
 					string role = Request.Form["rdUserRole"].ToString();
 

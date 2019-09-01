@@ -16,6 +16,7 @@ using Uplift.DataAccess.Data.Repository.IRepository;
 using Uplift.DataAccess.Data.Repository;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Uplift.Areas.Identity.Services;
+using Uplift.DataAccess.Data.Initializer;
 
 namespace Uplift
 {
@@ -49,6 +50,7 @@ namespace Uplift
 				options.Cookie.IsEssential = true;
 			});
 			services.AddScoped<IUnitOfWork, UnitOfWork>();
+			services.AddScoped<IDbInitializer, DbInitializer>();
 			services.AddTransient<IEmailSender, EmailSender>(i =>
 				new EmailSender(
 					Configuration["EmailSender:Host"],
@@ -64,7 +66,7 @@ namespace Uplift
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-		public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+		public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IDbInitializer dbInit)
 		{
 			if (env.IsDevelopment())
 			{
@@ -81,7 +83,7 @@ namespace Uplift
 			app.UseStaticFiles();
 			app.UseSession();
 			app.UseRouting();
-
+			dbInit.Initialize();
 			app.UseAuthentication();
 			app.UseAuthorization();
 			
