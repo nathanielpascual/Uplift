@@ -18,6 +18,8 @@ namespace Uplift.DataAccess.Data.Repository.IRepository
 
 		IUserRepository User { get; }
 
+		IWebImageRepository WebImage { get; }
+
 		#region StoredProcedure
 		ISP_Call SP_Call { get; }
 		#endregion

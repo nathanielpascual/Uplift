@@ -20,6 +20,7 @@ namespace Uplift.DataAccess.Data.Repository
 			OrderHeader = new OrderHeaderRepository(_db);
 			OrderDetails = new OrderDetailsRepository(_db);
 			User = new UserRepository(_db);
+			WebImage = new WebImageRepository(_db);
 			SP_Call = new SP_Call(_db);
 		}
 
@@ -29,7 +30,7 @@ namespace Uplift.DataAccess.Data.Repository
 		public IOrderHeaderRepository OrderHeader { get; private set; }
 		public IOrderDetailsRepository OrderDetails { get; private set; }
 		public IUserRepository User { get; private set; }
-
+		public IWebImageRepository WebImage { get; private set; }
 		#region StoredProcedure
 		public ISP_Call SP_Call { get; private set; }
 
